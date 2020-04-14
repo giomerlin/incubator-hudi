@@ -262,7 +262,6 @@ public class UtilitiesTestBase {
 
     public static TypedProperties setupSchemaOnDFS(String filename) throws IOException {
       UtilitiesTestBase.Helpers.copyToDFS("delta-streamer-config/" + filename, dfs, dfsBasePath + "/" + filename);
-      UtilitiesTestBase.Helpers.copyToDFS("delta-streamer-config/source.avsc", dfs, dfsBasePath + "/source.avsc");
       TypedProperties props = new TypedProperties();
       props.setProperty("hoodie.deltastreamer.schemaprovider.source.schema.file", dfsBasePath + "/" + filename);
       return props;
