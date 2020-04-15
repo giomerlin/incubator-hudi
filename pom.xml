@@ -29,7 +29,7 @@
   <groupId>org.apache.hudi</groupId>
   <artifactId>hudi</artifactId>
   <packaging>pom</packaging>
-  <version>0.5.2-incubating</version>
+  <version>0.5.2-incubating-merlin</version>
   <description>Apache Hudi (incubating) brings stream style processing on big data</description>
   <url>https://github.com/apache/incubator-hudi</url>
   <name>Hudi</name>
@@ -92,8 +92,8 @@
     <hive.version>2.3.1</hive.version>
     <hive.exec.classifier>core</hive.exec.classifier>
     <metrics.version>4.1.1</metrics.version>
-    <spark.version>2.4.4</spark.version>
-    <avro.version>1.8.2</avro.version>
+    <spark.version>2.4.5</spark.version>
+    <avro.version>1.9.2</avro.version>
     <scala.version>2.11.8</scala.version>
     <scala.binary.version>2.11</scala.binary.version>
     <apache-rat-plugin.version>0.12</apache-rat-plugin.version>
@@ -1103,4 +1103,15 @@
     <system>GitHub</system>
     <url>https://github.com/apache/incubator-hudi/issues</url>
   </issueManagement>
+
+  <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <url>https://nexus.release.merlinjobs.com/repository/merlin-app-release/</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>https://nexus.release.merlinjobs.com/repository/merlin-app-release/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>

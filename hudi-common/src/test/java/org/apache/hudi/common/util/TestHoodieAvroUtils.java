@@ -19,7 +19,6 @@
 package org.apache.hudi.common.util;
 
 import org.apache.avro.Schema;
-import org.codehaus.jackson.JsonNode;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -45,7 +44,7 @@ public class TestHoodieAvroUtils {
       }
 
       Assert.assertNotNull("field name is null", field.name());
-      Map<String, JsonNode> props = field.getJsonProps();
+      Map<String, Object> props = field.getObjectProps();
       Assert.assertNotNull("The property is null", props);
 
       if (field.name().equals("pii_col")) {

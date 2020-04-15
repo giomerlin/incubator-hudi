@@ -440,7 +440,7 @@ public class TestCleaner extends TestHoodieClientBase {
       HoodieCleanMetadata cleanMetadata2 = writeClient.runClean(table,
           HoodieTimeline.getCleanInflightInstant(cleanInstantTs));
       Assert.assertEquals(cleanMetadata1.getEarliestCommitToRetain(), cleanMetadata2.getEarliestCommitToRetain());
-      Assert.assertEquals(new Integer(0), cleanMetadata2.getTotalFilesDeleted());
+      Assert.assertEquals(new Integer(0).intValue(), cleanMetadata2.getTotalFilesDeleted());
       Assert.assertEquals(cleanMetadata1.getPartitionMetadata().keySet(),
           cleanMetadata2.getPartitionMetadata().keySet());
       cleanMetadata1.getPartitionMetadata().keySet().forEach(k -> {
